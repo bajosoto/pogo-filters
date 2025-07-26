@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon GO Filters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Pokemon Filters">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Pokemon GO Filters</h1>
+            <p>Tap a category to view filters</p>
+        </header>
+
+        <div id="main-menu" class="menu">
+            <button class="category-btn" data-category="pve">
+                <span class="icon">⚔️</span>
+                <span class="label">PvE (Raids/Gyms)</span>
+            </button>
+            <button class="category-btn" data-category="gl">
+                <span class="icon">🏆</span>
+                <span class="label">Great League</span>
+            </button>
+            <button class="category-btn" data-category="ul">
+                <span class="icon">🥇</span>
+                <span class="label">Ultra League</span>
+            </button>
+            <button class="category-btn" data-category="ml">
+                <span class="icon">👑</span>
+                <span class="label">Master League</span>
+            </button>
+        </div>
+
+        <div id="tier-menu" class="menu hidden">
+            <div class="back-btn-container">
+                <button id="back-btn" class="back-btn">← Back</button>
+                <h2 id="category-title"></h2>
+            </div>
+            <div class="tier-grid">
+                <button class="tier-btn" data-tier="s">S Tier</button>
+                <button class="tier-btn" data-tier="a">A Tier</button>
+                <button class="tier-btn" data-tier="b">B Tier</button>
+                <button class="tier-btn" data-tier="c">C Tier</button>
+                <button class="tier-btn combined" data-tier="combined">Combined All</button>
+            </div>
+            <div class="shadow-toggle">
+                <label class="toggle">
+                    <input type="checkbox" id="shadow-toggle">
+                    <span class="slider"></span>
+                    <span class="toggle-label">Shadow Pokemon</span>
+                </label>
+            </div>
+        </div>
+
+        <div id="filter-display" class="menu hidden">
+            <div class="back-btn-container">
+                <button id="filter-back-btn" class="back-btn">← Back</button>
+                <h3 id="filter-title"></h3>
+            </div>
+            <div class="filter-container">
+                <textarea id="filter-text" readonly></textarea>
+                <button id="copy-btn" class="copy-btn">📋 Copy Filter</button>
+                <div id="copy-success" class="copy-success hidden">✅ Copied!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
