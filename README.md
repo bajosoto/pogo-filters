@@ -17,7 +17,7 @@ A mobile-friendly Progressive Web App for quick access to Pokemon GO search filt
 2. Select category (PvE/GL/UL/ML)
 3. Choose tier (S/A/B/C/Combined)
 4. Toggle Shadow/Non-Shadow as needed
-5. Tap "Copy Filter" 
+5. Tap "Copy Filter"
 6. Paste in Pokemon GO search
 
 ## Install on Phone
